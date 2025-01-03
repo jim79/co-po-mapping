@@ -146,20 +146,20 @@
 
         // Adding the Table
         doc.autoTable({
-          startY: 40,
-          body: [
-            ['Course Code', courseCode],
-            ['Course Name', courseName],
-            ['Semester', semester],
-            ['Branch', branch],
-            ['Credits', credits],
-            ['L/T/P', ltP],
-            ['Academic Year', academicYear],
-            ['Prerequisites', prerequisites],
-            ['Name of the Faculty', facultyName],
-          ],
-        });
-
+      startY: 40,
+      body: [
+        ['Course Code', courseCode],
+        ['Course Name', courseName],
+        ['Semester', semester],
+        ['Branch', branch],
+        ['Credits', credits],
+        ['L/T/P', ltP],
+        ['Academic Year', academicYear],
+        ['Prerequisites', prerequisites],
+        ['Name of the Faculty', facultyName],
+      ],
+      theme: 'grid', // Optional: Makes the table simple without gridlines
+    });
         // Save the PDF
         doc.save('CO-PO-PSO_Mapping.pdf');
       }
