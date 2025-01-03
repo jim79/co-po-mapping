@@ -1,57 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dept.of ECE, College of Engineering Trivandrum : CO-PO-PSO Mapping</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-        .column {
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .left-column {
-            background-color: #f4f4f4;
-        }
-        .right-column {
-            background-color: #e8e8e8;
-        }
-        @media (max-width: 768px) {
-            .column {
-                flex: 100%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dept.of ECE, College of Engineering Trivandrum : CO-PO-PSO Mapping</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+  >
+  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://unpkg.com/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.js"></script> -->
 </head>
 <body>
-    <header style="text-align: center; padding: 20px; background-color: #333; color: white;">
-        <h2>CO-PO-PSO Mapping</h1>
-        <h3>Dept.of Electronics & Communication Engineering</h3>
-        <h3>College of Engineering Trivandrum</h3>
-    </header>
-    <main class="container">
-        <section class="column left-column">
-            <h2>Left Column</h2>
-            <p>This is the left column. You can add content here such as text, images, or widgets.</p>
-        </section>
-        <section class="column right-column">
-            <h2>Right Column</h2>
-            <p>This is the right column. You can add complementary content like advertisements, links, or other information.</p>
-        </section>
-    </main>
-    <footer style="text-align: center; padding: 10px; background-color: #333; color: white;">
-        <p>&copy; 2025 Your Website Name. All rights reserved.</p>
-    </footer>
+    <section class="hero is-primary is-small">
+        <div class="hero-body">
+          <p class="title">CO-PO-PSO Mapping</p>
+          <p class="subtitle">Dept.of Electronics & Communication Engineering</p>
+          <p class="subtitle">College of Engineering Trivandrum</p>
+        </div>
+    </section>
+
+
+    <button class="button" id="pdf">PDF</button>
+
+
+    <div class="container" style="text-align: center;">
+        <h1 class="title is-4">
+            Department of Electronics & Communication Engineering
+        </h1>
+    </div>
+    <div class="container" style="text-align: center;">
+        <h1 class="title is-4">
+            College of Engineering Trivandrum
+        </h1>
+    </div>
+    <div class="container" style="text-align: center;">
+        <h1 class="title is-4">
+            Course Outcome (CO) – Program Outcome (PO) – Program Specific Outcome (PSO) Mapping
+        </h1>
+    </div>
+    <!-- table -->
+    <section class="section">
+        <div class="fixed-grid has-12-cols">
+            <div class="grid is-gap-0.5">
+              <div class="cell is-col-span-2"><Strong>Course Code</Strong></div>
+              <div class="cell is-col-span-1"><input class="input" type="text"></div>
+              <div class="cell is-col-span-2"><Strong>Course Name</Strong></div>
+              <div class="cell is-col-span-7"><input class="input" type="text"></div>
+              <div class="cell is-col-span-2"><Strong>Semester</Strong></div>
+              <div class="cell is-col-span-2">
+                <div class="select is-primary is-fullwidth">
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="cell is-col-span-2"><Strong>Branch</Strong></div>
+              <div class="cell is-col-span-6">
+                <div class="select is-primary is-fullwidth">
+                    <select>
+                        <option value="Applied Electronics and Instrumentation Engineering">Applied Electronics and Instrumentation Engineering</option>
+                        <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="cell is-col-span-1"><Strong>Credits</Strong></div>
+              <div class="cell is-col-span-1">
+                <div class="select is-primary is-fullwidth">
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="cell is-col-span-1"><Strong>L/T/P</Strong></div>
+              <div class="cell is-col-span-1">
+                <div class="select is-primary is-fullwidth">
+                    <select>
+                        <option value="3-1-0">3-1-0</option>
+                        <option value="2-0-0">2-0-0</option>
+                        <option value="3-0-0">3-0-0</option>
+                        <option value="0-0-3">0-0-3</option>
+                        <option value="4-0-0">4-0-0</option>
+                        <option value="2-0-2">2-0-2</option>
+                        <option value="0-0-6">0-0-6</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="cell is-col-span-2"><Strong>Academic Year</Strong></div>
+              <div class="cell is-col-span-6">
+                <div class="select is-primary is-fullwidth">
+                    <select>
+                        <option value="2020 - 2021">2020 - 2021</option>
+                        <option value="2021 - 2022">2021 - 2022</option>
+                        <option value="2022 - 2023">2022 - 2023</option>
+                        <option value="2023 - 2024">2023 - 2024</option>
+                        <option value="2024 - 2025">2024 - 2025</option>
+                        <option value="2026 - 2027">2027 - 2028</option>
+                        <option value="2028 - 2029">2028 - 2029</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="cell is-col-span-2"><Strong>Prerequisites</Strong></div>
+              <div class="cell is-col-span-10"><input class="input" type="text"></div>
+              <div class="cell is-col-span-2"><Strong>Name of the Faculty</Strong></div>
+              <div class="cell is-col-span-10"><input class="input" type="text"></div>
+            </div>
+          </div>
+    </section>
+   <script type="module">
+    import 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js';
+    import 'https://unpkg.com/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.js';
+    function save_pdf() {
+        var doc = new jsPDF()
+        doc.text('Hello world!', 10, 10);
+        doc.autoTable({
+                    head: [['Name', 'Email', 'Country']], // First row as header
+                    body: ['David', 'david@example.com', 'Sweden'], // Remaining rows as body
+                    startY: 20, // Starting Y position
+                });
+            
+        doc.save('a4.pdf');
+    }
+    var button = document.getElementById("pdf");
+    button.addEventListener("click",save_pdf)
+   </script>
 </body>
-</html>
+</html> 
