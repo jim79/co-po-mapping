@@ -120,22 +120,54 @@
             </div>
           </div>
     </section>
-   <script type="module">
-    import 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js';
-    import 'https://unpkg.com/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.js';
-    function save_pdf() {
-        var doc = new jsPDF()
-        doc.text('Hello world!', 10, 10);
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script>
+      function save_pdf() {
+        const { jsPDF } = window.jspdf; // Access jsPDF from the global window object
+        const doc = new jsPDF();
+
+        // Title and Header
+        doc.setFontSize(16);
+        doc.text("Dept. of Electronics & Communication Engineering", 10, 10);
+        doc.text("College of Engineering Trivandrum", 10, 20);
+        doc.text("CO-PO-PSO Mapping", 10, 30);
+
+        // Extracting Data from the Form
+        const courseCode = document.querySelector('input[type="text"]').value || 'N/A';
+        const courseName = document.querySelectorAll('input[type="text"]')[1].value || 'N/A';
+        const semester = document.querySelector('select').value || 'N/A';
+        const branch = document.querySelectorAll('select')[1].value || 'N/A';
+        const credits = document.querySelectorAll('select')[2].value || 'N/A';
+        const ltP = document.querySelectorAll('select')[3].value || 'N/A';
+        const academicYear = document.querySelectorAll('select')[4].value || 'N/A';
+        const prerequisites = document.querySelectorAll('input[type="text"]')[2].value || 'N/A';
+        const facultyName = document.querySelectorAll('input[type="text"]')[3].value || 'N/A';
+
+        // Adding the Table
         doc.autoTable({
-                    head: [['Name', 'Email', 'Country']], // First row as header
-                    body: ['David', 'david@example.com', 'Sweden'], // Remaining rows as body
-                    startY: 20, // Starting Y position
-                });
-            
-        doc.save('a4.pdf');
-    }
-    var button = document.getElementById("pdf");
-    button.addEventListener("click",save_pdf)
-   </script>
+          startY: 40,
+          head: [['Field', 'Value']],
+          body: [
+            ['Course Code', courseCode],
+            ['Course Name', courseName],
+            ['Semester', semester],
+            ['Branch', branch],
+            ['Credits', credits],
+            ['L/T/P', ltP],
+            ['Academic Year', academicYear],
+            ['Prerequisites', prerequisites],
+            ['Name of the Faculty', facultyName],
+          ],
+        });
+
+        // Save the PDF
+        doc.save('CO-PO-PSO_Mapping.pdf');
+      }
+
+      // Button Event Listener
+      const button = document.getElementById("pdf");
+      button.addEventListener("click", save_pdf);
+    </script>
 </body>
 </html> 
