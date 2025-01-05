@@ -1,172 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dept.of ECE, College of Engineering Trivandrum : CO-PO-PSO Mapping</title>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
-  >
-  
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://unpkg.com/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.js"></script> -->
-</head>
-<body>
-    <section class="hero is-primary is-small">
-        <div class="hero-body">
-          <p class="title">CO-PO-PSO Mapping</p>
-          <p class="subtitle">Dept.of Electronics & Communication Engineering</p>
-          <p class="subtitle">College of Engineering Trivandrum</p>
-        </div>
-    </section>
-
-
-    <button class="button" id="pdf">PDF Output</button>
-
-
-    <div class="container" style="text-align: center;">
-        <h1 class="title is-4">
-            Department of Electronics & Communication Engineering
-        </h1>
-    </div>
-    <div class="container" style="text-align: center;">
-        <h1 class="title is-4">
-            College of Engineering Trivandrum
-        </h1>
-    </div>
-    <div class="container" style="text-align: center;">
-        <h1 class="title is-4">
-            Course Outcome (CO) – Program Outcome (PO) – Program Specific Outcome (PSO) Mapping
-        </h1>
-    </div>
-    <!-- table -->
-    <section class="section">
-        <div class="fixed-grid has-12-cols">
-            <div class="grid is-gap-0.5">
-              <div class="cell is-col-span-2"><Strong>Course Code</Strong></div>
-              <div class="cell is-col-span-1"><input class="input" type="text"></div>
-              <div class="cell is-col-span-2"><Strong>Course Name</Strong></div>
-              <div class="cell is-col-span-7"><input class="input" type="text"></div>
-              <div class="cell is-col-span-2"><Strong>Semester</Strong></div>
-              <div class="cell is-col-span-2">
-                <div class="select is-primary is-fullwidth">
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="cell is-col-span-2"><Strong>Branch</Strong></div>
-              <div class="cell is-col-span-6">
-                <div class="select is-primary is-fullwidth">
-                    <select>
-                        <option value="Applied Electronics and Instrumentation Engineering">Applied Electronics and Instrumentation Engineering</option>
-                        <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="cell is-col-span-1"><Strong>Credits</Strong></div>
-              <div class="cell is-col-span-1">
-                <div class="select is-primary is-fullwidth">
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="cell is-col-span-1"><Strong>L/T/P</Strong></div>
-              <div class="cell is-col-span-1">
-                <div class="select is-primary is-fullwidth">
-                    <select>
-                        <option value="3-1-0">3-1-0</option>
-                        <option value="2-0-0">2-0-0</option>
-                        <option value="3-0-0">3-0-0</option>
-                        <option value="0-0-3">0-0-3</option>
-                        <option value="4-0-0">4-0-0</option>
-                        <option value="2-0-2">2-0-2</option>
-                        <option value="0-0-6">0-0-6</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="cell is-col-span-2"><Strong>Academic Year</Strong></div>
-              <div class="cell is-col-span-6">
-                <div class="select is-primary is-fullwidth">
-                    <select>
-                        <option value="2020 - 2021">2020 - 2021</option>
-                        <option value="2021 - 2022">2021 - 2022</option>
-                        <option value="2022 - 2023">2022 - 2023</option>
-                        <option value="2023 - 2024">2023 - 2024</option>
-                        <option value="2024 - 2025">2024 - 2025</option>
-                        <option value="2026 - 2027">2027 - 2028</option>
-                        <option value="2028 - 2029">2028 - 2029</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="cell is-col-span-2"><Strong>Prerequisites</Strong></div>
-              <div class="cell is-col-span-10"><input class="input" type="text"></div>
-              <div class="cell is-col-span-2"><Strong>Name of the Faculty</Strong></div>
-              <div class="cell is-col-span-10"><input class="input" type="text"></div>
-            </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    >
+    <title>Dept.of ECE, College of Engineering Trivandrum : CO-PO-PSO Mapping</title>
+    <style>
+        th{
+            text-align: center !important;
+            vertical-align: middle !important;
+        }
+    </style>
+ </head>
+ <body>
+    <!-- <button id="printer" class="button">PDF</button> -->
+    <section id="tables" class="section">
+  <table class="table is-size-7 is-bordered is-fullwidth" style="empty-cells: show; width: 100%;">
+   <tr>
+    <th colspan="16" class="has-text-centered title is-6">
+    Department of Electronics &amp; Communication Engineering<br>
+    College of Engineering Trivandrum
+    </th>
+   </tr>
+   <tr>
+    <th colspan="16" class="has-text-centered title is-7">
+     Course Outcome (CO) – Program Outcome (PO) – Program Specific Outcome (PSO) Mapping
+    </th>
+   </tr>
+   <tr>
+    <td colspan="3">
+     Course Code
+    </td>
+    <td colspan="1" contenteditable="true" class="has-background-success-dark">
+    </td>
+    <td colspan="3">
+     Course Name
+    </td>
+    <td colspan="9" contenteditable="true" class="has-background-success-dark">
+    </td>
+   </tr>
+   <tr>
+    <td colspan="2">
+     Semester
+    </td>
+    <td colspan="2">
+        <p id="semestertext" class="is-hidden"></p>
+        <div id="semester" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="semesterselect">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
           </div>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-    <script>
-      function save_pdf() {
-        const { jsPDF } = window.jspdf; // Access jsPDF from the global window object
-        const doc = new jsPDF();
+    </td>
+    <td colspan="3">
+     Branch
+    </td>
+    <td colspan="9">
+        <p id="branchtext" class="is-hidden"></p>
+        <div id="branch" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="branchselect">
+                <option value="Applied Electronics and Instrumentation Engineering">Applied Electronics and Instrumentation Engineering</option>
+                <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+            </select>
+        </div>
+    </td>
+   </tr>
+   <tr>
+    <td colspan="2">
+     Credits
+    </td>
+    <td>
+        <p id="creditstext" class="is-hidden"></p>
+        <div id="credits" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="creditsselect">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+    </td>
+    <td colspan="2">
+     L/T/P
+    </td>
+    <td colspan="2">
+        <p id="ltptext" class="is-hidden"></p>
+        <div id="ltp" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="ltpselect">
+                <option value="3-1-0">3-1-0</option>
+                <option value="2-0-0">2-0-0</option>
+                <option value="3-0-0">3-0-0</option>
+                <option value="0-0-3">0-0-3</option>
+                <option value="4-0-0">4-0-0</option>
+                <option value="2-0-2">2-0-2</option>
+                <option value="0-0-6">0-0-6</option>
+            </select>
+        </div>
+    </td>
+    <td colspan="2">
+     Academic Year
+    </td>
+    <td colspan="6">
+        <p id="academicYeartext" class="is-hidden"></p>
+        <div id="academicYear" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="academicYearselect">
+                <option value="2020 - 2021">2020 - 2021</option>
+                <option value="2021 - 2022">2021 - 2022</option>
+                <option value="2022 - 2023">2022 - 2023</option>
+                <option value="2023 - 2024">2023 - 2024</option>
+                <option value="2024 - 2025">2024 - 2025</option>
+                <option value="2026 - 2027">2027 - 2028</option>
+                <option value="2028 - 2029">2028 - 2029</option>
+            </select>
+        </div>
+    </td>
+   </tr>
+   <tr>
+    <td colspan="2">
+     Prerequisite
+    </td>
+    <td colspan="14" contenteditable="true" class="has-background-success-dark">
+    </td>
+   </tr>
+   <tr>
+    <td colspan="5">
+     Name of the Faculty
+    </td>
+    <td colspan="11" id="faculty_name" contenteditable="true" class="has-background-success-dark">
+    </td>
+   </tr>
+   <tr>
+   </tr>
+  </table>
+  <table class="table is-size-7 is-bordered is-fullwidth" style="empty-cells: show; width: 100%;">
+   <tr>
+    <td colspan="16" class="title is-6">
+     Course Outcomes
+    </td>
+   </tr>
+   <tr>
+    <td colspan="16">
+     After the successful completion of this course, students will able to :
+    </td>
+   </tr>
+   <tr>
+    <th>
+     Sl. No
+    </th>
+    <th colspan="5">
+     Course Outcome Description
+    </th>
+    <th colspan="2">
+     Cognitive level
+    </th>
+    <th colspan="6">
+     Justification for cognitive level
+    </th>
+    <th colspan="2" xml:space="preserve">
+     Assessment Tools
+    </th>
+   </tr>
+   <tr>
+    <td>
+     C01
+    </td>
+    <td colspan="5" contenteditable="true" class="has-background-success-dark">
+     Explain the operation of functional units of a typical computer architecture w.r.t instruction
+                execution, control signal generation
+    </td>
+    <td colspan="2">
+        <p id="cl1text" class="is-hidden"></p>
+        <div id="cl1" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="cl1select">
+                <option value="1">Remember (1)</option>
+                <option value="2">Understand (2)</option>
+                <option value="3">Apply (3)</option>
+                <option value="4">Analyze (4)</option>
+                <option value="5">Evaluate (5)</option>
+                <option value="6">Create (6)</option>
+            </select>
+        </div>
+    </td>
+    <td colspan="6" contenteditable="true" class="has-background-success-dark">
+     This course outcome is mapped to cognitive level 2 because it involves comprehending the roles of
+                functional units of computer and their coordination in executing instructions and generating control
+                signals.
+    </td>
+    <td colspan="2" contenteditable="true" class="has-background-success-dark">
+     Internal Exam
+    </td>
+   </tr>
+   <tr>
+    <td>
+     C02
+    </td>
+    <td colspan="5" contenteditable="true" class="has-background-success-dark">
+     Explain the architecture of 8051 microcontroller and develop simple programs using assembly language
+                programming.
+    </td>
+    <td colspan="2">
+        <p id="cl2text" class="is-hidden"></p>
+        <div id="cl2" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="cl2select">
+                <option value="1">Remember (1)</option>
+                <option value="2">Understand (2)</option>
+                <option value="3">Apply (3)</option>
+                <option value="4">Analyze (4)</option>
+                <option value="5">Evaluate (5)</option>
+                <option value="6">Create (6)</option>
+            </select>
+        </div>
+    </td>
+    <td colspan="6" contenteditable="true" class="has-background-success-dark">
+     This course outcome is mapped to cognitive level 2 because it emphasizes understanding the 8051
+                architecture and applying foundational knowledge to create simple assembly language programs.
+    </td>
+    <td colspan="2" contenteditable="true" class="has-background-success-dark">
+     Internal Exam
+    </td>
+   </tr>
+   <tr>
+    <td>
+     C03
+    </td>
+    <td colspan="5" contenteditable="true" class="has-background-success-dark">
+     Develop ALP/Embedded C programs to interface 8051 microcontroller with various peripheral devices
+    </td>
+    <td colspan="2">
+        <p id="cl3text" class="is-hidden"></p>
+        <div id="cl3" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="cl3select">
+                <option value="1">Remember (1)</option>
+                <option value="2">Understand (2)</option>
+                <option value="3">Apply (3)</option>
+                <option value="4">Analyze (4)</option>
+                <option value="5">Evaluate (5)</option>
+                <option value="6">Create (6)</option>
+            </select>
+        </div>
+    </td>
+    <td colspan="6" contenteditable="true" class="has-background-success-dark">
+     This course outcome is mapped to cognitive level 3 because it requires students to apply their
+                programming skills and knowledge of interfacing techniques to implement functional systems using the
+                8051 microcontroller.
+    </td>
+    <td colspan="2" contenteditable="true" class="has-background-success-dark">
+     Internal Exam, Course Project interim and final evaluation,
+     Course Project report
+    </td>
+   </tr>
+   <tr>
+    <td>
+     C04
+    </td>
+    <td colspan="5" contenteditable="true" class="has-background-success-dark">
+     Develop Programming concepts of Embedded programming in C
+    </td>
+    <td colspan="2">
+        <p id="cl4text" class="is-hidden"></p>
+        <div id="cl4" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="cl4select">
+                <option value="1">Remember (1)</option>
+                <option value="2">Understand (2)</option>
+                <option value="3">Apply (3)</option>
+                <option value="4">Analyze (4)</option>
+                <option value="5">Evaluate (5)</option>
+                <option value="6">Create (6)</option>
+            </select>
+        </div>
+    </td>
+    <td colspan="6" contenteditable="true" class="has-background-success-dark">
+     This course outcome is mapped to cognitive level 2 because it focuses on grasping the foundational
+                principles of embedded C programming and their application to solve basic embedded system tasks.
+    </td>
+    <td colspan="2" contenteditable="true" class="has-background-success-dark">
+     Internal Exam
+    </td>
+   </tr>
+   <tr>
+    <td>
+     C05
+    </td>
+    <td colspan="5" contenteditable="true" class="has-background-success-dark">
+     Explain the concepts of RTOS based embedded system.
+    </td>
+    <td colspan="2">
+        <p id="cl5text" class="is-hidden"></p>
+        <div id="cl5" name="selector" class="select is-success is-dark is-fullwidth">
+            <select id="cl5select">
+                <option value="1">Remember (1)</option>
+                <option value="2">Understand (2)</option>
+                <option value="3">Apply (3)</option>
+                <option value="4">Analyze (4)</option>
+                <option value="5">Evaluate (5)</option>
+                <option value="6">Create (6)</option>
+            </select>
+        </div>
+    </td>
+    <td colspan="6" contenteditable="true" class="has-background-success-dark">
+     This course outcome is mapped to cognitive level 2 because it focuses on understanding the fundamental
+                principles and features of RTOS and their role in managing embedded system operations.
+    </td>
+    <td colspan="2" contenteditable="true" class="has-background-success-dark">
+     Assignment
+    </td>
+   </tr>
+   <tr>
+   </tr>
+  </table>
 
-        // Title and Header
-        doc.setFontSize(16);
-        doc.text("Dept. of Electronics & Communication Engineering", 10, 10);
-        doc.text("College of Engineering Trivandrum", 10, 20);
-        doc.text("CO-PO-PSO Mapping", 10, 30);
 
-        // Extracting Data from the Form
-        const courseCode = document.querySelector('input[type="text"]').value || 'N/A';
-        const courseName = document.querySelectorAll('input[type="text"]')[1].value || 'N/A';
-        const semester = document.querySelector('select').value || 'N/A';
-        const branch = document.querySelectorAll('select')[1].value || 'N/A';
-        const credits = document.querySelectorAll('select')[2].value || 'N/A';
-        const ltP = document.querySelectorAll('select')[3].value || 'N/A';
-        const academicYear = document.querySelectorAll('select')[4].value || 'N/A';
-        const prerequisites = document.querySelectorAll('input[type="text"]')[2].value || 'N/A';
-        const facultyName = document.querySelectorAll('input[type="text"]')[3].value || 'N/A';
 
-        // Adding the Table
-        doc.autoTable({
-      startY: 40,
-      body: [
-        ['Course Code', courseCode],
-        ['Course Name', courseName],
-        ['Semester', semester],
-        ['Branch', branch],
-        ['Credits', credits],
-        ['L/T/P', ltP],
-        ['Academic Year', academicYear],
-        ['Prerequisites', prerequisites],
-        ['Name of the Faculty', facultyName],
-      ],
-      theme: 'grid', // Optional: Makes the table simple without gridlines
-    });
-        // Save the PDF
-        doc.save('CO-PO-PSO_Mapping.pdf');
-      }
+  <table by="jcm" class="table is-size-7 is-bordered is-fullwidth" style="empty-cells: show; width: 100%; text-align: center !important;" >
+   <tr>
+    <th colspan="16" class="title is-6">
+     CO – PO – PSO Mapping
+    </th>
+   </tr>
+   <tr>
+    <th rowspan="2">
+     CO
+    </th>
+    <th colspan="12">
+     Program Outcomes (PO)
+    </th>
+    <th colspan="3">
+     PSO
+    </th>
+   </tr>
+   <tr>
+    <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>1</th><th>2</th><th>3</th>
+   </tr>
+   <tr contenteditable="true" id="co1-map">
+    <th>1</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td pso="1"></td><td pso=""></td><td pso=""></td>
+   </tr>
+   <tr contenteditable="true" id="co2-map">
+    <th>2</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td pso=""></td><td pso=""></td><td pso=""></td>
+   </tr>
+   <tr contenteditable="true" id="co3-map">
+    <th>3</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td pso=""></td><td pso=""></td><td pso=""></td>
+   </tr>
+   <tr contenteditable="true" id="co4-map">
+    <th>4</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td pso=""></td><td pso=""></td><td pso=""></td>
+   </tr>
+   <tr contenteditable="true" id="co5-map">
+    <th>5</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td pso=""></td><td pso=""></td><td pso=""></td>
+   </tr>
+   <tr>
+    <td colspan="16" style="text-align: left !important;">
+     CO-PO/PSO matrix showing level of correlation (1-Low, 2-Medium, and 3-High)
+    </td>
+   </tr>
+    </table>
 
-      // Button Event Listener
-      const button = document.getElementById("pdf");
-      button.addEventListener("click", save_pdf);
-    </script>
-</body>
-</html> 
+    <table class="table is-size-7 is-bordered is-fullwidth" style="empty-cells: show; width: 100%;">
+   <tr>
+    <td colspan="16" class="title is-6">
+     Justification for CO – PO - PSO Mapping
+    </td>
+   </tr>
+   <tr>
+    <th colspan="3" style="word-spacing: 10px">
+     CO | PO/PSO | Justification
+    </th>
+    <!-- <th colspan="2">
+     PO/PSO
+    </th>
+    <th>
+     CL
+    </th>
+    <th colspan="8">
+     Justification
+    </th> -->
+   </tr>
+<tr>
+    <td colspan="2" rowspan="2">
+        CO1
+    </td>
+</tr>
+<tr class="is-fullwidth"><td colspan="15" class="is-fullwidth"><table id="co1-just" class="is-fullwidth" style="table-layout:fixed; word-wrap: break-word; width: 100%;"></table></td></tr>
+<!-- <td  colspan="15" style="padding: 0%; width: 100%;"> -->
+
+</td>
+   <tr>
+    <td colspan="2" rowspan="2">
+     CO 2
+    </td>
+   </tr>
+   <tr class="is-fullwidth"><td colspan="15" class="is-fullwidth"><table id="co2-just" class="is-fullwidth" style="table-layout:fixed; word-wrap: break-word; width: 100%;"></table></td></tr>
+   <!-- <td id="co2-just" colspan="15" style="padding: 0%; width: 100%;"></td> -->
+   <tr>
+    <td colspan="2" rowspan="2">
+     CO 3
+    </td>
+   </tr>
+   <tr class="is-fullwidth"><td colspan="15" class="is-fullwidth"><table id="co3-just" class="is-fullwidth" style="table-layout:fixed; word-wrap: break-word; width: 100%;"></table></td></tr>
+   <tr>
+    <td colspan="2" rowspan="2">
+     CO 4
+    </td>
+   </tr>
+   <tr class="is-fullwidth"><td colspan="15" class="is-fullwidth"><table id="co4-just" class="is-fullwidth" style="table-layout:fixed; word-wrap: break-word; width: 100%;"></table></td></tr>
+   <tr>
+    <td colspan="2" rowspan="2">
+     CO 5
+    </td>
+   </tr>
+   <tr class="is-fullwidth"><td colspan="15" class="is-fullwidth"><table id="co5-just" class="is-fullwidth" style="table-layout:fixed; word-wrap: break-word; width: 100%;"></table></td></tr>
+   
+  </table>
+  <section class="section"> <h1 class="title is-6" id="sign" style="float: right;"></h1> </section>
+  
+</section>
+  <script src="print.js"></script>
+  <script src="mapping_sync.js"></script>
+<p id="jcm" style="font-size: 10px; text-align: center !important;">jcm 23062011</p>
+ </body>
+</html>
