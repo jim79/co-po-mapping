@@ -28,7 +28,7 @@ function co1() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
@@ -51,7 +51,7 @@ function co1() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
@@ -101,7 +101,7 @@ function co2() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
@@ -124,7 +124,7 @@ function co2() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
@@ -175,7 +175,7 @@ function co3() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
@@ -198,7 +198,7 @@ function co3() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
@@ -249,7 +249,7 @@ function co4() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
@@ -272,7 +272,7 @@ function co4() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
@@ -323,7 +323,7 @@ function co5() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
@@ -346,7 +346,7 @@ function co5() {
                     var juster = document.createElement("td")
                     juster.setAttribute("contenteditable","true")
                     juster.setAttribute("colspan","11")
-                    juster.classList.add("has-background-success-dark")
+                    juster.classList.add("has-background-success-primary")
                     row.appendChild(juster)
 
                     just.appendChild(row);
