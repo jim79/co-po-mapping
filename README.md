@@ -1,4 +1,4 @@
-### Course Outcome (CO) – Program Outcome (PO) – Program Specific Outcome (PSO) Mapping 
+### Course Outcome (CO) – Program Outcome (PO) – Program Specific Outcome (PSO) Mapping Template
 #### Department of Electronics & Communication Engineering
 #### College of Engineering Trivandrum
 
